@@ -1,0 +1,15 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: steelblue;
+}
+
+ul {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+}
