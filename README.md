@@ -30,10 +30,18 @@ It was developed to practice **backend architecture**, **clean code principles**
 ## Project Structure
 
 se.iths.sofia.springbootproj
+```
 ├── controller # Handles HTTP requests
+
 ├── model # Entity classes
+
 ├── repo # Repository interfaces for DB access
+
 ├── service # Business logic
+
 └── resources
+
 ├── templates # Thymeleaf templates
+
 └── static # CSS, JS, images
+```
