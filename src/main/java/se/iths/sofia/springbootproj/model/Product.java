@@ -1,10 +1,19 @@
 package se.iths.sofia.springbootproj.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "products", schema = "public")
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private double price;
     private String description;
+
+    public Product() {
+    }
 
     public Product(int id, String name, double price, String description) {
         this.id = id;

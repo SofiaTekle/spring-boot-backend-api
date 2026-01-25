@@ -9,15 +9,18 @@
 </head>
 <body>
 <h1>Produkter</h1>
-<ul>
-    <li th:each="product : ${products}">
-        <strong th:text="${product.name}"></strong><br>
-        <span th:text="${product.description}"></span><br>
-        Pris: <span th:text="${product.price}"></span><br>
-
-    </li>
-</ul>
-
+<table>
+    <tr>
+        <th>Namn</th>
+        <th>Pris</th>
+        <th>Kategori</th>
+    </tr>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.description}"></td>
+    </tr>
+</table>
 
 </body>
 </html>

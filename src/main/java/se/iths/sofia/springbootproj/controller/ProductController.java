@@ -5,23 +5,24 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import se.iths.sofia.springbootproj.model.Product;
+import se.iths.sofia.springbootproj.service.ProductService;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/products")
 public class ProductController {
+    private final ProductService productService;
 
-    @GetMapping("/products")
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
+
+    @GetMapping
     public String getProducts(Model model) {
-        List<Product> products = List.of(
-                new Product(1, "Basketboll", 199, "Sport"),
-                new Product(2, "Mascara", 100, "Smink"),
-                new Product(3, "Fotboll", 150, "Sport")
-        );
-        model.addAttribute("products", products);
+        List<Product> products = productService.getProducts();
+        model.addAttribute("products", productService.getProducts());
         return "products";
-
     }
 
 }
