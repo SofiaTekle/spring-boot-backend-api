@@ -39,9 +39,9 @@ se.iths.sofia.springbootproj
 
 ├── service # Business logic
 
-└── resources
+├── resources
 
-├── templates # Thymeleaf templates
+ └── templates # Thymeleaf templates
 
-└── static # CSS, JS, images
+ └── static # CSS, JS, images
 ```
