@@ -1,18 +1,19 @@
 package se.iths.sofia.springbootproj.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import se.iths.sofia.springbootproj.model.User;
+import se.iths.sofia.springbootproj.repo.UserRepository;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
+    private final UserRepository userRepository;
+
     public List<User> getUsers() {
-        return List.of(
-                new User(1, "Sofia", "sofia@example.com", 30),
-                new User(2, "Theo", "theo@example.com", 35),
-                new User(3, "Kalle", "kalle@example.com", 25)
-        );
+        return userRepository.findAll();
     }
 }

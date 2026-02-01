@@ -26,6 +26,8 @@ It was developed to practice **backend architecture**, **clean code principles**
 - Maven  
 - PostgreSQL or H2 database  
 - Git & GitHub for version control
+- Lombok for reducing boilerplate code
+
 
 ## Project Structure
 
