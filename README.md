@@ -1,49 +1,43 @@
 # Spring Boot Backend API
 
-A backend application built with **Java** and **Spring Boot** as part of my system development studies.
+A backend application built with Java and Spring Boot.
 
-The project focuses on building **RESTful APIs**, handling requests and responses, and integrating with a database.  
-It was developed to practice **backend architecture**, **clean code principles**, and basic **API design**.
+The project demonstrates how to build a RESTful API using a clean layered architecture, DTOs, validation, and a real
+PostgreSQL database.
 
 ---
 
 ## Features
 
-- Demonstrates **layered architecture** (Controller, Service, Repository).  
-- Integration with a database using **Spring Data JPA**.  
-- Rendering HTML views with **Thymeleaf** (for demonstration purposes).  
-- Basic CRUD functionality for managing entities (e.g., products, users).  
-- Example of clean code and organized project structure.
+- RESTful API with Spring Boot
+- Layered architecture (Controller, Service, Repository)
+- DTOs for requests and responses
+- Input validation and global exception handling
+- PostgreSQL database hosted on Neon
+- Entity relationship between Users and Products
+- Safe delete logic (users cannot be deleted if products exist)
 
 ---
 
 ## Technologies Used
 
-- Java 17+  
-- Spring Boot 3.x  
-- Spring Data JPA / Hibernate  
-- Thymeleaf  
-- Maven  
-- PostgreSQL or H2 database  
-- Git & GitHub for version control
-- Lombok for reducing boilerplate code
-
+- Java 21
+- Spring Boot 3.x
+- Spring Data JPA / Hibernate
+- PostgreSQL (Neon)
+- Maven
+- Lombok
 
 ## Project Structure
 
-se.iths.sofia.springbootproj
 ```
-├── controller # Handles HTTP requests
+se.iths.sofia.springbootproj
+├── controller
+├── dto
+├── model
+├── repo
+├── service
+├── exception
+└── resources
 
-├── model # Entity classes
-
-├── repo # Repository interfaces for DB access
-
-├── service # Business logic
-
-├── resources
-
- └── templates # Thymeleaf templates
-
- └── static # CSS, JS, images
 ```
